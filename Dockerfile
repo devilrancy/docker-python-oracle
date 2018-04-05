@@ -10,7 +10,7 @@ RUN apt-get update \
     && apt-get -y install libaio-dev \
     && mkdir -p /opt/data/api
 
-RUN apt-get install -y build-essential libssl-dev libffi-dev \
+RUN apt-get install -y build-essential libssl-dev libffi-dev python-dev \
     && apt-get -y install postgresql-client \
     && apt-get -y install postgresql-client-common \
     && apt-get -y install python-psycopg
