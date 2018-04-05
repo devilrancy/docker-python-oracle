@@ -8,10 +8,12 @@ RUN apt-get update \
     && apt-get -y install gcc \
     && apt-get -y install unzip \
     && apt-get -y install libaio-dev \
+    && mkdir -p /opt/data/api
+
+RUN apt-get install -y build-essential libssl-dev libffi-dev \
     && apt-get -y install postgresql-client \
     && apt-get -y install postgresql-client-common \
-    && apt-get -y install python-psycopg \
-    && mkdir -p /opt/data/api
+    && apt-get -y install python-psycopg
 
 ADD ./oracle-instantclient/ /opt/data
 ADD ./install-instantclient.sh /opt/data
